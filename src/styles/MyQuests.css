@@ -1,0 +1,74 @@
+.my-quests-title {
+    font-family: 'Singsong', cursive;
+    background-image: url('../assets/scotch_tape.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #1e293b;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.page-subtitle {
+    font-family: 'Schoolbell', cursive;
+    font-size: 1.5rem;
+    color: #1e293b;
+    text-align: center;
+    margin-bottom: 1rem;
+    background-image: url('../assets/scotch_tape.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #1e293b;
+}
+
+p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.empty-state{
+    background-image: url('../assets/scotch_tape.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.empty-state p{
+    text-align: center;
+    font-size: 1.2rem;
+    color: #1e293b;
+    margin-top: 2rem;
+}
+
+.quest-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.create-btn, .edit-btn {
+    background: #fef3c7;
+    border: 1px solid #fbbf24;
+    font-size: 0.95rem;
+    color: #1e293b;
+    cursor: pointer;
+    padding: 0.60rem 0.8rem;
+    border-radius: 999px;
+    font-family: inherit;
+    box-shadow: 0 10px 20px rgba(251, 191, 36, 0.18);
+    transition: 0.3s ease;
+}
+
+.create-btn:hover, .edit-btn:hover {
+    background-color: #fef9c3;
+    transform: scale(1.05);
+}
