@@ -53,8 +53,32 @@ h1 {
   text-align: center;
   padding: 0.5rem;
   font-size: 1.25rem;
-  font-weight: bold;
   margin-bottom: 2rem;
+  transition: 0.3s ease-in-out;
+}
+
+.header-tape-banner:hover{
+  rotate: -2deg;
+  scale: 1.05;
+  transition: 0.3s ease-in-out;
+}
+
+.create-header {
+  font-family: 'Singsong', cursive;
+  background-image: url('./assets/scotch_tape.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #1e293b;
+  text-align: center;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.create-header:hover{
+  rotate: 2deg;
+  scale: 1.05;
+  transition: 0.3s ease-in-out;
 }
 
 .feed-controls {
@@ -95,4 +119,26 @@ h1 {
   font-size: 1.3rem;
   color: #1e293b;
   margin-top: 2rem;
+}
+
+.add-file-btn {
+  background: #fef3c7;
+  border: 1px solid #fbbf24;
+  font-size: 0.95rem;
+  color: #1e293b;
+  cursor: pointer;
+  padding: 0.60rem 0.8rem;
+  border-radius: 999px;
+  font-family: inherit;
+  box-shadow: 0 10px 20px rgba(251, 191, 36, 0.18);
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.add-file-btn:hover {
+  background-color: #fef9c3;
+  transform: scale(1.05);
 }

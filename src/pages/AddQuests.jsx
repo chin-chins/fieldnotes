@@ -104,7 +104,9 @@ const AddQuests = () =>{
 
     return(
          <div className='create-quest'>
-            <h1 className='create-header'>add a quest !!</h1>  
+            <div className='create-header'>
+                <h1>add a quest !!</h1>  
+            </div>
             
             <form className="create-form" onSubmit={handleSubmit}>
 
@@ -190,7 +192,7 @@ const AddQuests = () =>{
                 <div className='form-badge'>
                     <label className="form-label" htmlFor="image_url">Add Image/Quest Cover from Device</label><br />
                     <input 
-                        className="form-input" 
+                        className="form-input add-file-btn" 
                         type="file" 
                         accept="image/*"
                         onChange={(e) => setSelectedFile(e.target.files[0])}

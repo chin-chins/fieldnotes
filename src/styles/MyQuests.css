@@ -12,6 +12,12 @@
     margin-bottom: 2rem;
 }
 
+.my-quests-title:hover{
+    rotate: -2deg;
+    scale: 1.05;
+    transition: 0.3s ease-in-out;
+}
+
 .page-subtitle {
     font-family: 'Schoolbell', cursive;
     font-size: 1.5rem;
