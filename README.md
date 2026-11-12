@@ -63,7 +63,11 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you added to improve the site's functionality!
+* [X] Quest cards fall back to a default image if an image is missing or fails to load
+* [X] Optimistic UI updates for clovers, with rollback on failure
+* [X] Search covers both quest titles and location tags
+* [X] "My Quests" page showing only the current user's posts
+* [X] Comments ("quester notes") that the original author can delete
 
 ## Video Walkthrough
 
