@@ -1,6 +1,6 @@
 # Web Development Final Project - *FieldNotes*
 
-Submitted by: **Chimdinma Nwamge**
+Submitted by: **Chimdinma Nwamgbe**
 
 This web app: **FieldNotes** is a social media like app that allows users to find and create side quests (little adventures) for other users to try out. 
 
