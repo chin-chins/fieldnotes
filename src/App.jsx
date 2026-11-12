@@ -1,5 +1,3 @@
-import { useState, useEffect } from 'react'
-import { supabase } from './client'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import SideBar from './components/SideBar'
 import Home from './pages/Home'
@@ -10,9 +8,6 @@ import QuestDetail from './pages/QuestDetail'
 import './App.css'
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
-  const [selectedQuestId, setSelectedQuestId] = useState(null);
-
   return (
     <BrowserRouter>
       <div className='app-container'>

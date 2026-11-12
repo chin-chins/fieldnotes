@@ -33,7 +33,7 @@ const QuestCard = ({quest, onUpvote = null, actionButton = null}) =>{
 
                 <div className="card-details">
                     <p className="detail-line">📍 {quest.location_tag || 'Worldwide'}</p>
-                    <p className="detail-line">⏳ {quest.time_to_complete || 'Anytime'}</p>
+                    <p className="detail-line">⏳ {quest.time_to_complete || 'Flexible'}</p>
                     <p></p>
                 </div>
 

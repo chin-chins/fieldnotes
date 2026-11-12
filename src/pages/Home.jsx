@@ -1,4 +1,4 @@
-import { useState, useEffect, use } from "react"
+import { useState, useEffect } from "react"
 import { supabase } from "../client"
 import QuestCard from "../components/QuestCard"
 
@@ -37,7 +37,7 @@ const Home = () =>{
     }, [sortBy]);
     
     // upvote/clover handling 
-    const handleUpvote = async (QuestGrid, currentClovers) => {
+    const handleUpvote = async (questId, currentClovers) => {
         setQuests((prevQuests) =>
             prevQuests.map((q) =>
             q.id === questId ? {...q, clovers: currentClovers + 1} : q)

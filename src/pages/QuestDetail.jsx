@@ -128,14 +128,17 @@ const QuestDetail = () =>{
 
         const userId = await ensureUserId();
         const { error } = await supabase
+        
         .from('quests')
         .delete()
         .eq('id', id)
-        .eq('author_id', userId); // double security check 
+        .eq('author_id', userId) // double security check 
+        .select(); 
 
-        if (error) {
-            console.error('Error deleting quest:', error.message);
+        if (error || !data?.length) {
+            console.error('Error deleting quest:', error?.message);
             alert('Failed to delete quest.');
+            return;
         } else {
             alert('Quest deleted successfully!');
             navigate('/'); // redirect home 
@@ -205,9 +208,10 @@ const QuestDetail = () =>{
             .select();
         
         
-            if (error) {
-                console.error('Error updating quest:', error.message);
+            if (error || !data?.length) {
+                console.error('Error updating quest:', error?.message);
                 alert('Failed to update quest.');
+                return; 
             } else {
                 setQuest({
                     ...data[0],
@@ -219,7 +223,7 @@ const QuestDetail = () =>{
             }
         }
         catch (error) {
-            console.error('Error uploading image during edit:', err);
+            console.error('Error uploading image during edit:', error);
             alert('Failed to upload new image.');
         }
         finally {
@@ -340,6 +344,7 @@ const QuestDetail = () =>{
                             value={editFormData.time_to_complete}
                             onChange={handleEditChange}
                             className="form-input"
+                            placeholder="e.g. 2 hrs"
                         />
                         <br/>
 
@@ -383,7 +388,7 @@ const QuestDetail = () =>{
                     <div className="quest-tags">
                         <span className="badge">🏷️ {quest.categories || 'Uncategorized'}</span>
                         <span className="badge">📍 {quest.location_tag || 'Worldwide'}</span>
-                        <span className="badge">⏳ {quest.time_to_complete}</span>
+                        <span className="badge">⏳{quest.time_to_complete || 'Flexible'}</span>
                         <span className="badge">🍀 {quest.clovers || 0} Clovers</span>
                     </div>
                     

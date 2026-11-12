@@ -16,7 +16,7 @@ const AddQuests = () =>{
         description: '',
         categories: [],
         is_local: true,
-        location: 'Worldwide',
+        location_tag: '',
         time_to_complete: '',
         clovers: 0,
         image_url: ''
@@ -77,7 +77,7 @@ const AddQuests = () =>{
                 description: quest.description,
                 categories: quest.categories.join(', '),
                 is_local: quest.is_local,
-                location_tag: quest.location_tag,
+                location_tag: quest.is_local && quest.location_tag?.trim() ? quest.location_tag.trim(): 'Worldwide',
                 time_to_complete: quest.time_to_complete ? `${quest.time_to_complete} hrs` : 'Flexible',
                 clovers: quest.clovers,
                 image_url: imageUrl,
@@ -88,6 +88,7 @@ const AddQuests = () =>{
             console.log("Quest Data Ready to Send:", quest);
             if (error) {
                 console.error("Supabase Error:", error.message);
+                alert("Failed to create quest.")
             } else {
                 console.log("Success! Data inserted:", data);
                 navigate("/"); // navigate back to home page 
@@ -118,7 +119,6 @@ const AddQuests = () =>{
                         className="form-input" 
                         onChange={handleChange}
                         placeholder="e.g. Find a bench with a pretty view"
-                        required
                     />
                 </div>
 
