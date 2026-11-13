@@ -7,11 +7,11 @@ const About = () => {
   return (
     <div className="about-page page-container">
       <div className='about-header'>
-        <h1>About SideQuest</h1>
+        <h1>About FieldNotes</h1>
       </div>
       <div className="about-subtitle">
         <p >
-          SideQuest is a community platform designed to break routine and turn everyday life into an interactive adventure game!
+          FieldNotes is a community platform designed to break routine and turn everyday life into an interactive adventure game!
         </p>
       </div>
 

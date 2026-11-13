@@ -12,7 +12,7 @@
 .about-header {
     font-family: 'Singsong', cursive;
     background-image: url('../assets/scotch_tape.png');
-    background-size: fill;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     color: #1e293b;
